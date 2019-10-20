@@ -249,19 +249,15 @@ body main .capabilities div:nth-child(even) p {
   }
   63% {
     border-color: #242424;
-    background-color: rgba(245, 245, 245, 0.9);
   }
   66% {
     border-color: #f8ffff;
-    background-color: rgba(220, 220, 220, 0.9);
   }
   96% {
     border-color: #f8ffff;
-    background-color: rgba(220, 220, 220, 0.9);
   }
   100% {
     border-color: #00d9ff;
-    background-color: rgba(245, 245, 245, 0.9);
   }
 }
 
@@ -277,19 +273,15 @@ body main .capabilities div:nth-child(even) p {
   }
   63% {
     border-color: #242424;
-    background-color: rgba(245, 245, 245, 0.9);
   }
   66% {
     border-color: #f8ffff;
-    background-color: rgba(220, 220, 220, 0.9);
   }
   96% {
     border-color: #f8ffff;
-    background-color: rgba(220, 220, 220, 0.9);
   }
   100% {
     border-color: #00d9ff;
-    background-color: rgba(245, 245, 245, 0.9);
   }
 }
 

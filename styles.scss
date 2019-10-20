@@ -7,6 +7,7 @@ $blueColor: rgb(0, 217, 255);
 $blackColor: rgb(36, 36, 36);
 $whiteColor: rgb(248, 255, 255);
 $shoesBoxColor: rgba(245, 245, 245, 0.9);
+$animationTime: 12s;
 html{
     font-size: 18px;
 }
@@ -20,7 +21,7 @@ body{
         background-size: cover;
         background-position: center right;
         position: relative;
-        animation: changeBgColor 12s infinite;
+        animation: changeBgColor $animationTime infinite;
         h1{
             text-align: center;
             position: absolute;
@@ -31,7 +32,7 @@ body{
             font-weight: bold;
         }
         span{
-            animation: changeColor 12s infinite;
+            animation: changeColor $animationTime infinite;
             text-shadow: 2px 1px 2px black;
         }
         .shoesBox{
@@ -45,7 +46,7 @@ body{
             border-radius: 50%;
             overflow: hidden;
             transition: .3s;
-            animation: changeBorderColor 12s infinite;
+            animation: changeBorderColor $animationTime infinite;
             &:hover{
                 transform: scale(1.1);
                 border: 20px solid;
@@ -59,13 +60,13 @@ body{
                 opacity: 0;
             }
             img:nth-of-type(1){
-                animation: showImage 12s infinite;
+                animation: showImage $animationTime infinite;
             }
             img:nth-of-type(2){
-                animation: showImage 12s 4s infinite;
+                animation: showImage $animationTime $animationTime/3 infinite;
             }
             img:nth-of-type(3){
-                animation: showImage 12s 8s infinite;
+                animation: showImage $animationTime $animationTime*2/3 infinite;
             }
             
         }
@@ -165,19 +166,15 @@ body{
     }
     63%{
         border-color: $blackColor;
-        background-color: $shoesBoxColor;
     }
     66%{
         border-color: $whiteColor;
-        background-color: darken($shoesBoxColor, 10%);
     }
     96%{
         border-color: $whiteColor;
-        background-color: darken($shoesBoxColor, 10%);
     }
     100%{
         border-color: $blueColor;
-        background-color: $shoesBoxColor;
     }
 }
 
