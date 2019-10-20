@@ -141,6 +141,12 @@ body main .capabilities div:nth-child(even) p {
           order: 2;
 }
 
+body footer {
+  background-color: #1f1f1f;
+  color: #787878;
+  padding: 2rem;
+}
+
 @-webkit-keyframes changeBgColor {
   0% {
     background-color: #00d9ff;

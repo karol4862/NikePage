@@ -8,6 +8,7 @@ $blackColor: rgb(36, 36, 36);
 $whiteColor: rgb(248, 255, 255);
 $shoesBoxColor: rgba(245, 245, 245, 0.9);
 $animationTime: 12s;
+$footerBgColor: rgb(31, 31, 31);
 html{
     font-size: 18px;
 }
@@ -103,6 +104,11 @@ body{
                 }
             }
         }
+    }
+    footer{
+        background-color: $footerBgColor;
+        color: lighten($footerBgColor, 35%);
+        padding: 2rem;
     }
 }
 
