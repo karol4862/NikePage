@@ -9,6 +9,8 @@ $whiteColor: rgb(248, 255, 255);
 $shoesBoxColor: rgba(245, 245, 245, 0.9);
 $animationTime: 12s;
 $footerBgColor: rgb(31, 31, 31);
+$reviewSize: 70vh;
+$reviewTransition: .6s;
 html{
     font-size: 18px;
 }
@@ -101,6 +103,33 @@ body{
             div:nth-child(even){
                 p{
                     order:2;
+                }
+            }
+        }
+        .reviewPhoto{
+            background-image: url("commercialPhoto.jpg");
+            background-position: bottom;
+            background-size: cover;
+            height: $reviewSize;
+            filter: grayscale(0);
+            transition: $reviewTransition;
+            &:hover{
+                filter: grayscale(100%);
+            }
+            .reviewContent{
+                height: 100%;
+                color: white;
+                font-size: 2rem;
+                text-align: center;
+                opacity: 0;
+                padding-top: $reviewSize/2 ;
+                transition: $reviewTransition;
+                background-image: linear-gradient(to right,rgb(36, 36, 36) 10%, rgba(36, 36, 36, 0.3) 50%,rgb(36, 36, 36) 90%);
+                &:hover{
+                    opacity: 1;
+                }
+                h2{
+                    text-transform: uppercase;
                 }
             }
         }
