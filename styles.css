@@ -54,8 +54,8 @@ body header .shoesBox {
   border: 10px #00d9ff solid;
   bottom: 5%;
   right: 15%;
-  width: 45vh;
-  height: 45vh;
+  width: 25rem;
+  height: 25rem;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transition: .3s;
@@ -72,7 +72,7 @@ body header .shoesBox:hover {
 
 body header .shoesBox img {
   position: absolute;
-  width: 170%;
+  width: 40rem;
   top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(3deg);
@@ -127,13 +127,15 @@ body main .capabilities div p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2rem;
+  z-index: 2;
 }
 
 body main .capabilities div img {
-  max-height: 45vh;
+  height: 45vh;
   margin: 0 auto;
   -webkit-transition: .3s;
   transition: .3s;
+  z-index: 1;
 }
 
 body main .capabilities div img:hover {
@@ -169,11 +171,24 @@ body main .reviewPhoto .reviewContent {
   font-size: 2rem;
   text-align: center;
   opacity: 0;
-  padding-top: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, #242424), color-stop(50%, rgba(36, 36, 36, 0.3)), color-stop(90%, #242424));
-  background-image: linear-gradient(to right, #242424 10%, rgba(36, 36, 36, 0.3) 50%, #242424 90%);
+  text-shadow: 5px 5px 3px black;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(36, 36, 36, 0.9)), color-stop(50%, rgba(36, 36, 36, 0.3)), to(rgba(36, 36, 36, 0.9)));
+  background-image: linear-gradient(to right, rgba(36, 36, 36, 0.9) 0%, rgba(36, 36, 36, 0.3) 50%, rgba(36, 36, 36, 0.9) 100%);
 }
 
 body main .reviewPhoto .reviewContent:hover {
@@ -182,6 +197,37 @@ body main .reviewPhoto .reviewContent:hover {
 
 body main .reviewPhoto .reviewContent h2 {
   text-transform: uppercase;
+}
+
+body main .reviewVideo {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, white), color-stop(30%, #a0d7e7), color-stop(70%, #a0d7e7), color-stop(70%, white));
+  background-image: linear-gradient(to right, white 30%, #a0d7e7 30%, #a0d7e7 70%, white 70%);
+  padding: 5rem 6rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .reviewVideo iframe {
+  -webkit-box-shadow: 0 0 0 2rem #a0d7e7;
+          box-shadow: 0 0 0 2rem #a0d7e7;
+  width: 50vw;
+  height: 35vw;
+}
+
+body main .reviewVideo h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: white;
+  text-shadow: 3px 3px 3px #242424;
 }
 
 body footer {
@@ -367,6 +413,135 @@ body footer {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (min-width: 1281px) {
+  html {
+    font-size: 22px;
+  }
+  body main .reviewPhoto {
+    height: 91vh;
+  }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  html {
+    font-size: 16px;
+  }
+  body header h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 6px white;
+    text-align: left;
+  }
+  body main .reviewPhoto .reviewContent {
+    opacity: 1;
+  }
+  body main .reviewVideo iframe {
+    width: 70vw;
+    height: 50vw;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  html {
+    font-size: 14px;
+  }
+  body main .reviewPhoto .reviewContent {
+    opacity: 1;
+  }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 11px;
+  }
+  body header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px white;
+    text-align: left;
+  }
+  body header .shoesBox {
+    width: 15rem;
+    height: 15rem;
+  }
+  body header .shoesBox img {
+    width: 20rem;
+  }
+  body main .reviewPhoto {
+    height: 91vh;
+  }
+  body main .reviewPhoto .reviewContent {
+    opacity: 1;
+  }
+  body main .capabilities div p {
+    padding: 0 3rem;
+  }
+  body main .reviewVideo iframe {
+    width: 60vw;
+    height: 40vw;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  body header .shoesBox {
+    width: 15rem;
+    height: 15rem;
+  }
+  body header .shoesBox img {
+    width: 20rem;
+  }
+  body header h1 {
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px white;
+    text-align: right;
+  }
+  body main .capabilities div img {
+    display: none;
+  }
+  body main .capabilities div p {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 3rem 1rem;
+  }
+  body main .reviewPhoto {
+    height: 52.5vh;
+  }
+  body main .reviewPhoto .reviewContent {
+    opacity: 1;
+  }
+  body main .reviewVideo iframe {
+    width: 90vw;
+    height: 60vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
